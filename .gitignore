@@ -1,10 +1,22 @@
-#archivos ignorados
+# archivos db integrada
 db.sqlite3
+
+# archivos de imagenes de post y perfiles
 posts/photos/
 users/pictures/
+
+# credenciales
 blog_django_final/.env
+
+# __pychache__
 blog_django_final/__pycache__/
 categories/__pycache__/
 comments/__pycache__/
 posts/__pycache__/
 users/__pycache__/
+
+# migrations
+categories/migrations/
+comments/migrations/
+posts/migrations/
+users/migrations/

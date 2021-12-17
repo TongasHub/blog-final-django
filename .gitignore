@@ -1,3 +1,4 @@
+#archivos ignorados
 db.sqlite3
 posts/photos/
 users/pictures/
@@ -7,4 +8,3 @@ categories/__pycache__/
 comments/__pycache__/
 posts/__pycache__/
 users/__pycache__/
-

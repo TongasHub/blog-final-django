@@ -1,3 +1,10 @@
+#archivos ignorados
+db.sqlite3
 posts/photos/
-
 users/pictures/
+blog_django_final/.env
+blog_django_final/__pycache__/
+categories/__pycache__/
+comments/__pycache__/
+posts/__pycache__/
+users/__pycache__/

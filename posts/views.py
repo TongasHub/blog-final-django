@@ -54,10 +54,11 @@ def save_comment(request):
         url = request.POST["url"]
         post = {
             "user": request.user.id,
-            "profile": request.user.id,
+            "profile": request.user.id - 1,
             "comment": request.POST["comment"],
             "post": request.POST["post"],
         }
+        print(post)
         form = CreateCommentForm(post)
         if form.is_valid():
             form.save()

@@ -16,7 +16,7 @@ posts/__pycache__/
 users/__pycache__/
 
 # migrations
-categories/migrations/
-comments/migrations/
-posts/migrations/
-users/migrations/
+# categories/migrations/
+# comments/migrations/
+# posts/migrations/
+# users/migrations/

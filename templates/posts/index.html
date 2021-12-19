@@ -10,7 +10,7 @@
           <img class="card-img-top" src="{{ post.image_header.url }}" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">{{post.title}}</h2>
-            <p class="card-text">{{post.post|safe|truncatechars:300}}</p>
+            <p class="card-text">{{post.post|safe|truncatechars:400}}</p>
             <a href="{% url 'posts:detail' post.url%}" class="btn btn-primary">Leer más &rarr;</a>
           </div>
           <div class="card-footer text-muted">

@@ -54,7 +54,7 @@ def save_comment(request):
         url = request.POST["url"]
         post = {
             "user": request.user.id,
-            "profile": request.user.id - 1,
+            "profile": request.user.id,
             "comment": request.POST["comment"],
             "post": request.POST["post"],
         }

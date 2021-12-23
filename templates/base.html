@@ -51,6 +51,7 @@
       <div class="container">
          {% block content %}{% endblock %}    
          <!-- Sidebar Widgets Column -->
+         {% if is_index_view %}
          <div class="col-md-4">
             <!-- Categories Widget -->
             <div class="card my-4">
@@ -71,33 +72,28 @@
             </div>
             <!-- Side Widget -->
             <div class="card my-4">
-<<<<<<< HEAD
-               <h5 class="card-header">COSAS QUE PUEDE HACER DESDE EL SOFÁ</h5>
-               <div class="card-body">
-                  <p>Ahorre electricidad enchufando los electrodomésticos en una regleta y desconectándolos por completo cuando no los utilice, incluso su ordenador.</p>
-
-                  <p>Deje de utilizar los estados de cuenta bancarios en papel y pague sus facturas en línea o a través del teléfono móvil.</p>
-
-                  <p>Comparta, no se limite a hacer clic en “me gusta”. Si ve una publicación interesante en las redes sociales sobre los derechos de la mujer o el cambio climático, compártala para que las personas de su red también la vean.</p>
-                  
-                  <a href="https://www.un.org/sustainabledevelopment/es/takeaction/" class="card-link">Ver mas Consejos</a>
-=======
                <h5 class="card-header">Filtrar por fecha</h5>
                <div class="card-body">
                   <form action="{% url 'posts:fecha' %}" method="get" >
                      <input type="date" name="dateFilter">
                      <button type="submit" >Filtrar</button>
                   </form>
->>>>>>> 8f5371108b9e0065c72e8cb3856fb51e0601f891
                </div>
             </div>
          </div>
+         {% endif %}
       </div>
 
             <div class="card my-4">
                <h5 class="card-header">Grupo 9</h5>
                <div class="card-body">
                   <p>Informatorio 2021 - Chaco - Argentina</p>
+                  <ul>
+                     <li>Ferreyra Gaston Emmanuel</li>
+                     <li>Rodriguez Santiago</li>
+                     <li>Garcia Diego Martin</li>
+                     <li>Cabrera Carlos Adrian</li>
+                  </ul>
                   <a href="" class="card-link"></a>
                </div>
             </div>

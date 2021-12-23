@@ -14,7 +14,7 @@ urlpatterns = [
         name="filter",
     ),
     path(
-        route="dateFilter/",
+        route="post/dateFilter/",
         view=views.PostsFeedView.as_view(),
         name="fecha",
     ),

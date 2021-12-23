@@ -44,6 +44,7 @@ class PostsFeedView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
+        context["is_index_view"] = True
         return context
 
 
@@ -62,6 +63,7 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
+        context["is_index_view"] = True
         context["comments"] = Comment.objects.filter(post=self.get_object()).all()
         context["form_comments"] = CreateCommentForm()
         return context

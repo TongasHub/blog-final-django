@@ -3,8 +3,7 @@
     <div class="row">
       <div class="col-md-8">
 
-        <h1 class="my-4">Posts Recientes
-        </h1>
+        <h1 class="my-4">Objetivos de Desarrollo Sostenible</h1>
         {% for post in posts %}
         <div class="card mb-4">
           <img class="card-img-top" src="{{ post.image_header.url }}" alt="Card image cap">
@@ -21,10 +20,10 @@
         {% endfor %}
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
-            <a class="page-link" href="#">&larr; Mas viejo</a>
+            <a class="page-link" href="#">&larr; Anteriores</a>
           </li>
           <li class="page-item disabled">
-            <a class="page-link" href="#">Mas nuevo &rarr;</a>
+            <a class="page-link" href="#"> Nuevos &rarr;</a>
           </li>
         </ul>
 

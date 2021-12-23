@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from django.views.generic import DetailView, ListView
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from datetime import datetime
 
 # Models
 from posts.models import Post
 from categories.models import Category
 from comments.models import Comment
+
 
 # Forms
 from comments.forms import CreateCommentForm
@@ -20,7 +22,24 @@ class PostsFeedView(ListView):
     ordering = ("-created",)
     paginate_by = 10
     context_object_name = "posts"
-    queryset = Post.objects.filter(is_draft=False)
+
+    def get_queryset(self):
+        name_filter = self.request.GET.get("filter_name", "default")
+        date_filter = self.request.GET.get("dateFilter")
+        if name_filter != "default" or type(date_filter) != None:
+            if date_filter != None:
+                queryset = Post.objects.filter(
+                    created__startswith=date_filter
+                ).order_by("-created")
+            elif name_filter != "default":
+                categoria = Category.objects.filter(name=name_filter)
+                queryset = Post.objects.filter(
+                    is_draft=False, categories=categoria[0].pk
+                ).order_by("-created")
+            else:
+                queryset = Post.objects.filter(is_draft=False).order_by("-created")
+
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
